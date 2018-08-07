@@ -24,21 +24,35 @@ export default class App extends React.Component {
       title: 'Music 2',
       imageCD: 'http://idgnow.com.br/idgimages/imagefolder.2015-09-01.0890491863/Deezer-logo_625.jpg',
       resumo: 'Your weekly mixtape of fresh music ...'
+    },
+    {
+      id: 3,
+      title: 'Music 2',
+      imageCD: 'http://idgnow.com.br/idgimages/imagefolder.2015-09-01.0890491863/Deezer-logo_625.jpg',
+      resumo: 'Your weekly mixtape of fresh music ...'
+    }
+    ,
+    {
+      id: 4,
+      title: 'Music 2',
+      imageCD: 'http://idgnow.com.br/idgimages/imagefolder.2015-09-01.0890491863/Deezer-logo_625.jpg',
+      resumo: 'Your weekly mixtape of fresh music ...'
     }]
     return (
 
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
 
         <View style={styles.header}>
           <Text style={styles.titleHead}>Playlist</Text>
         </View>
       
-        <FlatList
+        <FlatList 
+          horizontal={true}
           data={playlist}
           renderItem={({ item }) => this.getMusicTemplate(item)}
           keyExtractor={(item, index) => item.id.toString()}
         />
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -49,8 +63,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000',
-    alignItems: 'center',
+    //alignItems: 'center',
     paddingTop: 16,
+
   },
 
   header: {

@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#000',
         alignItems: 'center',
         paddingTop: 16,
+        paddingHorizontal: 30
     },
 
     playlist: {
